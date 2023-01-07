@@ -2,17 +2,21 @@ pub trait Strategy {
     fn something(&self) -> String;
 }
 
-pub struct Dohicky <'a> {
-    strat: Box<&'a dyn Strategy>,
+pub struct Dohicky {
+    strat: Box<dyn Strategy>,
 }
 
-impl<'a> Dohicky<'a> {
-    pub fn new(p: &'a dyn Strategy) -> Dohicky {
-        Dohicky { strat: Box::<&'a dyn Strategy>::new(p) }
+impl Dohicky {
+    pub fn new<T: Strategy + 'static>(p: T) -> Dohicky {
+        Dohicky { strat: Box::new(p) }
     }
 
     pub fn do_thing(&self) -> String {
         self.strat.something()
+    }
+
+    pub fn change_strategy<T: Strategy + 'static>(&mut self, p: T) {
+        self.strat = Box::new(p);
     }
 }
 
