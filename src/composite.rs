@@ -45,7 +45,7 @@ impl Composite {
         Composite { data: Vec::new() }
     }
 
-    pub fn push<T: Composible + 'static>(&mut self, elem: T) {
+    pub fn add<T: Composible + 'static>(&mut self, elem: T) {
         self.data.push(Box::new(elem));
     }
 }
