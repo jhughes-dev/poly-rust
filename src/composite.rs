@@ -3,7 +3,7 @@ use std::vec::Vec;
 pub trait Composible {
     fn apply(&self) -> String;
 }
-type Elem<'a> = &'a dyn Composible;
+type Elem = dyn Composible;
 
 pub struct Leaf {
     elem: String,
@@ -23,11 +23,11 @@ impl Leaf {
     }
 }
 
-pub struct Composite<'a> {
-    data: Vec<Box<Elem<'a>>>,
+pub struct Composite {
+    data: Vec<Box<Elem>>,
 }
 
-impl<'a> Composible for Composite<'a> {
+impl Composible for Composite {
     fn apply(&self) -> String {
         let it = self.data.iter();
         let data = it
@@ -40,19 +40,12 @@ impl<'a> Composible for Composite<'a> {
     }
 }
 
-impl<'a> Composite<'a> {
-    pub fn new() -> Composite<'a> {
+impl Composite {
+    pub fn new() -> Composite {
         Composite { data: Vec::new() }
     }
 
-    pub fn push(&mut self, elem: Elem<'a>) {
-        self.data.push(Box::<Elem<'a>>::new(elem));
-    }
-
-    pub fn pop(&mut self) -> Option<*mut Elem<'a>> {
-        match self.data.pop() {
-            None => None,
-            Some(b) => Some(Box::<Elem<'a>>::into_raw(b)),
-        }
+    pub fn push<T: Composible + 'static>(&mut self, elem: T) {
+        self.data.push(Box::new(elem));
     }
 }

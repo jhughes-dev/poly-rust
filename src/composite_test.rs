@@ -4,18 +4,14 @@ use crate::composite::*;
 fn structure()
 {
     let mut inner = Composite::new();
-    let a = Leaf::new("A");
-    let b = Leaf::new("B");
-    inner.push(&a);
-    inner.push(&b);
+    inner.push(Leaf::new("A"));
+    inner.push(Leaf::new("B"));
     assert_eq!(inner.apply(),"(A+B)");
 
     let mut outer = Composite::new();
-    let c = Leaf::new("C");
-    let d = Leaf::new("D");
-    outer.push(&c);
-    outer.push(&inner);
-    outer.push(&d);
+    outer.push(Leaf::new("C"));
+    outer.push(inner);
+    outer.push(Leaf::new("D"));
     assert_eq!(outer.apply(),"(C+(A+B)+D)");
 
 }
