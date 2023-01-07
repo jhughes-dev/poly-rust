@@ -35,7 +35,7 @@ impl Composible for Composite {
             .reduce(|st, rest| format!("{}+{}", st, rest));
         match data {
             None => String::new(),
-            Some(st) => format!("({})",st),
+            Some(st) => format!("({})", st),
         }
     }
 }
