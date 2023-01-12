@@ -1,10 +1,13 @@
 use std::vec::Vec;
 
+// I was thinking about extending apply to accept a closure
 pub trait Composible {
     fn apply(&self) -> String;
 }
-type Elem = dyn Composible;
 
+// This is the simplest thing I could think of for a leafy type
+// Other options could be to have and Enum or Generic, I'd be
+// interested to see this with an enum
 pub struct Leaf {
     elem: String,
 }
@@ -22,12 +25,16 @@ impl Leaf {
         }
     }
 }
-
+// Took the route of making the top level composite hold an array
+// This has an advantage of simplicity, but there's nothing
+// stopping having a separate class, or using a Box<dyn Composible>
+// and calling this a collection.
 pub struct Composite {
-    data: Vec<Box<Elem>>,
+    data: Vec<Box<dyn Composible>>,
 }
 
 impl Composible for Composite {
+    // For apply to accept a closure, maybe replace the reduce with a second map
     fn apply(&self) -> String {
         let it = self.data.iter();
         let data = it
