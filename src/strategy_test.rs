@@ -3,12 +3,12 @@ use crate::strategy::*;
 #[test]
 fn test_impl_one() {
     let s = Dohicky::new(Thingy1 {});
-    assert_eq!(s.do_thing(), "Thingy1");
+    assert_eq!(s.do_something(), "Thingy1");
 }
 #[test]
 fn test_impl_two() {
     let s = Dohicky::new(Thingy2 {});
-    assert_eq!(s.do_thing(), "Thingy2");
+    assert_eq!(s.do_something(), "Thingy2");
 }
 
 // This isn't technically anything special since we
@@ -25,8 +25,8 @@ impl Strategy for LocalThingy {
 #[test]
 fn test_impl_local() {
     let mut s = Dohicky::new(LocalThingy {});
-    assert_eq!(s.do_thing(), "Local");
+    assert_eq!(s.do_something(), "Local");
 
     s.change_strategy(Thingy1 {});
-    assert_eq!(s.do_thing(), "Thingy1");
+    assert_eq!(s.do_something(), "Thingy1");
 }

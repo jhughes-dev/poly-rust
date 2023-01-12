@@ -22,3 +22,12 @@ fn test_local() {
     let b = <dyn Interface>::new(ImplementorLocal {});
     assert_eq!(b.do_thing(), "*L*")
 }
+
+#[test]
+fn test_hook() {
+    let im = ImplementorLocal {};
+    im.hook();
+
+    let b = <dyn Interface>::new(ImplementorLocal {});
+    b.hook();
+}
