@@ -6,15 +6,18 @@ pub struct Dohicky {
     strat: Box<dyn Strategy>,
 }
 
+// this feels pretty straitforward
+
 impl Dohicky {
     pub fn new<T: Strategy + 'static>(p: T) -> Dohicky {
         Dohicky { strat: Box::new(p) }
     }
 
-    pub fn do_thing(&self) -> String {
+    pub fn do_something(&self) -> String {
         self.strat.something()
     }
-
+    // Adding the ability to have a runtime switch to drive
+    // home the polymorphism
     pub fn change_strategy<T: Strategy + 'static>(&mut self, p: T) {
         self.strat = Box::new(p);
     }
