@@ -27,7 +27,7 @@ Patterns which are already implemented are marked with a &check;.
 
 * [ ] Adapter
 * [ ] Bridge
-* [ ] Composite &check;
+* [x] Composite
 * [ ] Decorator
 * [ ] Facade
 * [ ] Flyweight
