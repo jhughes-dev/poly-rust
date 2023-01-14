@@ -8,3 +8,7 @@ pub mod template_test;
 pub mod composite;
 #[cfg(test)]
 pub mod composite_test;
+
+pub mod singleton;
+#[cfg(test)]
+pub mod singleton_test;
