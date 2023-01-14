@@ -19,50 +19,50 @@ Note: These techniques can come with a performance penalty over compile time alt
 
 ### Patterns
 
-Patterns which are already implemented are marked with a [x].
+Patterns which are already implemented are marked with a [x]. Issues for examples are linked next to unfinished examples.
 
 ---
 
 #### Structural
 
-* [ ] Adapter
-* [ ] Bridge
+* [ ] Adapter #1
+* [ ] Bridge #2
 * [x] Composite
-* [ ] Decorator
-* [ ] Facade
-* [ ] Flyweight
-* [ ] Proxy
+* [ ] Decorator #3
+* [ ] Facade #4
+* [ ] Flyweight #5
+* [ ] Proxy #6
 
 ---
 
 #### Behavioral
 
-* [ ] Chain of Responsibility
-* [ ] Command
-* [ ] Iterator (Standard Rust Feature)
-* [ ] Mediator
-* [ ] Memento
-* [ ] Observer
-* [ ] State
+* [ ] Chain of Responsibility #7
+* [ ] Command #8
+* [ ] Iterator #9 (Standard Rust Feature)
+* [ ] Mediator #10
+* [ ] Memento #11
+* [ ] Observer #12
+* [ ] State #13
 * [x] Strategy
 * [x] Template Method
-* [ ] Visitor
+* [ ] Visitor #14
 
 ---
 
 #### Creational
 
-* [ ] Abstract Factory
-* [ ] Builder
-* [ ] Factory Method
-* [ ] Prototype
+* [ ] Abstract Factory #15
+* [ ] Builder #16
+* [ ] Factory Method #17
+* [ ] Prototype #18
 * [x] Singleton
 
 ---
 
 #### Special
 
-* [ ] Model View Controller (MVC)
+* [ ] Model View Controller (MVC) #19
 
 
 ### Links
