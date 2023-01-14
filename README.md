@@ -25,44 +25,44 @@ Patterns which are already implemented are marked with a [x]. Issues for example
 
 #### Structural
 
-* [ ] Adapter #1
-* [ ] Bridge #2
+* [ ] Adapter [#1](https://github.com/jhughes-dev/poly-rust/issues/1)
+* [ ] Bridge [#2](https://github.com/jhughes-dev/poly-rust/issues/2)
 * [x] Composite
-* [ ] Decorator #3
-* [ ] Facade #4
-* [ ] Flyweight #5
-* [ ] Proxy #6
+* [ ] Decorator [#3](https://github.com/jhughes-dev/poly-rust/issues/3)
+* [ ] Facade [#4](https://github.com/jhughes-dev/poly-rust/issues/4)
+* [ ] Flyweight [#5](https://github.com/jhughes-dev/poly-rust/issues/5)
+* [ ] Proxy [#6](https://github.com/jhughes-dev/poly-rust/issues/6)
 
 ---
 
 #### Behavioral
 
-* [ ] Chain of Responsibility #7
-* [ ] Command #8
-* [ ] Iterator #9 (Standard Rust Feature)
-* [ ] Mediator #10
-* [ ] Memento #11
-* [ ] Observer #12
-* [ ] State #13
+* [ ] Chain of Responsibility [#7](https://github.com/jhughes-dev/poly-rust/issues/7)
+* [ ] Command [#8](https://github.com/jhughes-dev/poly-rust/issues/8)
+* [ ] Iterator [#9](https://github.com/jhughes-dev/poly-rust/issues/9) (Standard Rust Feature)
+* [ ] Mediator [#10](https://github.com/jhughes-dev/poly-rust/issues/10)
+* [ ] Memento [#11](https://github.com/jhughes-dev/poly-rust/issues/11)
+* [ ] Observer [#12](https://github.com/jhughes-dev/poly-rust/issues/12)
+* [ ] State [#13](https://github.com/jhughes-dev/poly-rust/issues/13)
 * [x] Strategy
 * [x] Template Method
-* [ ] Visitor #14
+* [ ] Visitor [#14](https://github.com/jhughes-dev/poly-rust/issues/14)
 
 ---
 
 #### Creational
 
-* [ ] Abstract Factory #15
-* [ ] Builder #16
-* [ ] Factory Method #17
-* [ ] Prototype #18
+* [ ] Abstract Factory [#15](https://github.com/jhughes-dev/poly-rust/issues/15)
+* [ ] Builder [#16](https://github.com/jhughes-dev/poly-rust/issues/16)
+* [ ] Factory Method [#17](https://github.com/jhughes-dev/poly-rust/issues/17)
+* [ ] Prototype [#18](https://github.com/jhughes-dev/poly-rust/issues/18)
 * [x] Singleton
 
 ---
 
 #### Special
 
-* [ ] Model View Controller (MVC) #19
+* [ ] Model View Controller (MVC) [#19](https://github.com/jhughes-dev/poly-rust/issues/19)
 
 
 ### Links
