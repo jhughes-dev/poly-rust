@@ -1,19 +1,24 @@
-// Singleton isn't really polymorpic, so this isn't so much in the spirit of the project, but I wanted to do it with a minumum of unsafe calls, and "non-initialized"
+// The idea is that there's one controler and that a user implements different algorithms for something
+// Basically, it's a singlton implementing a strategy pattern.
+
+pub trait Controller {
+    fn get_data(&self) -> String;
+}
 
 struct SingletonInternal {
-    data: Option<String>,
+    data: Option<Box<dyn Controller>>,
 }
 
 impl SingletonInternal {
     pub fn get_data(&self) -> String {
         match &self.data {
-            Some(st) => st.clone(),
+            Some(st) => st.get_data(),
             None => String::new(),
         }
     }
 
-    pub fn update_data(&mut self, d: &str) {
-        self.data = Some(String::from(d));
+    pub fn set_controller<T: Controller + 'static>(&mut self, ctrl: T) {
+        self.data = Some(Box::new(ctrl));
     }
 
     const fn new() -> SingletonInternal {
@@ -26,12 +31,12 @@ fn get_instance() -> &'static mut SingletonInternal {
     unsafe { &mut INSTANCE }
 }
 
-pub mod global {
+pub mod controller {
     pub fn get_data() -> String {
         super::get_instance().get_data()
     }
 
-    pub fn update_data(d: &str) {
-        super::get_instance().update_data(d);
+    pub fn set_controller<T: super::Controller + 'static>(ctrl: T) {
+        super::get_instance().set_controller(ctrl);
     }
 }
