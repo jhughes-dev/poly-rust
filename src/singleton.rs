@@ -28,6 +28,7 @@ impl SingletonInternal {
 
 fn get_instance() -> &'static mut SingletonInternal {
     static mut INSTANCE: SingletonInternal = SingletonInternal::new();
+    // TODO: All this needs is a lock around it
     unsafe { &mut INSTANCE }
 }
 
