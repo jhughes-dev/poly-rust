@@ -19,7 +19,7 @@ Note: These techniques can come with a performance penalty over compile time alt
 
 ### Patterns
 
-Patterns which are already implemented are marked with a &check;.
+Patterns which are already implemented are marked with a [x].
 
 ---
 
@@ -44,8 +44,8 @@ Patterns which are already implemented are marked with a &check;.
 * [ ] Memento
 * [ ] Observer
 * [ ] State
-* [&check;] Strategy
-* [&check;] Template Method
+* [x] Strategy
+* [x] Template Method
 * [ ] Visitor
 
 ---
@@ -56,7 +56,7 @@ Patterns which are already implemented are marked with a &check;.
 * [ ] Builder
 * [ ] Factory Method
 * [ ] Prototype
-* [&check;] Singleton
+* [x] Singleton
 
 ---
 
