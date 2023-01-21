@@ -1,5 +1,7 @@
 use crate::command::*;
 
+// This test shows the ways a set of commands could be used to control a
+// separate structure without exposing the internals of that structure.
 #[test]
 fn workflow() {
     let mut app = App::new();
@@ -13,14 +15,14 @@ fn workflow() {
     app.apply_command(&DownByThree::new());
     assert_eq!(app.get_data(), 4);
 
-    // Notice this won't let you create a processor or access data from App
+    // Notice this won't let you create a processor
     // let mut proc = Processor {};
 }
 
-
-struct SetToZero {
-
-}
+// This example allows for an external command to be implemented using the
+// Processor interface, even though the Processor struct isn't available
+// directly.
+struct SetToZero {}
 
 impl Command for SetToZero {
     fn execute(&self, proc: &mut Processor) {
@@ -35,6 +37,6 @@ fn clear_with_command() {
     app.apply_command(&SetValue::new(5));
     assert_eq!(app.get_data(), 5);
 
-    app.apply_command(&SetToZero{});
+    app.apply_command(&SetToZero {});
     assert_eq!(app.get_data(), 0);
 }
