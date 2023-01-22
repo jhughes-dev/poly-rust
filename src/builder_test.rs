@@ -7,7 +7,7 @@ struct RangeAttack {
 }
 
 impl Attack for RangeAttack {
-    fn deal_damage(& mut self) -> i32 {
+    fn deal_damage(&mut self) -> i32 {
         rand::thread_rng().gen_range(self.min..self.max)
     }
 }
@@ -39,11 +39,12 @@ struct BubbleDefense {
 
 impl Defense for BubbleDefense {
     fn absorb_damage(&mut self, damage: i32) -> i32 {
-        if (self.refreshed) {
-            damage -= self.strength;
+        let mut damage_out = damage;
+        if self.refreshed {
+            damage_out -= self.strength;
         }
         self.refreshed = !self.refreshed;
-        std::cmp::max(0, damage)
+        std::cmp::max(0, damage_out)
     }
 }
 
@@ -89,8 +90,12 @@ fn warrior() -> Character {
 
 #[test]
 fn battle() {
-    let wizard = wizard();
-    let warrior = warrior();
+    let mut wizard = wizard();
+    let mut warrior = warrior();
 
-    wizzard.attack_character(warrior);
+    warrior.attack_character(&mut wizard);
+    assert_eq!(wizard.is_alive(), true);
+
+    wizard.attack_character(&mut warrior);
+    assert_eq!(warrior.is_alive(), true);
 }
