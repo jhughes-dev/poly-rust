@@ -1,6 +1,7 @@
 pub mod strategy;
 #[cfg(test)]
 pub mod strategy_test;
+
 pub mod template;
 #[cfg(test)]
 pub mod template_test;
@@ -20,3 +21,7 @@ pub mod command_test;
 pub mod builder;
 #[cfg(test)]
 pub mod builder_test;
+
+pub mod prototype;
+#[cfg(test)]
+pub mod prototype_test;
