@@ -53,8 +53,8 @@ Patterns which are already implemented are marked with a [x]. Issues for example
 #### Creational
 
 * [x] Abstract Factory
-* [x] Builder [#16](https://github.com/jhughes-dev/poly-rust/issues/16)
-* [ ] Factory Method [#17](https://github.com/jhughes-dev/poly-rust/issues/17)
+* [x] Builder 
+* [x] Factory Method
 * [x] Prototype
 * [x] Singleton
 
