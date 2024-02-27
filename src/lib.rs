@@ -29,3 +29,7 @@ pub mod prototype_test;
 pub mod abstractfactory;
 #[cfg(test)]
 pub mod abstractfactory_test;
+
+pub mod factorymethod;
+#[cfg(test)]
+pub mod factorymethod_test;
