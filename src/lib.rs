@@ -30,9 +30,6 @@ pub mod abstractfactory;
 #[cfg(test)]
 pub mod abstractfactory_test;
 
-pub mod observer;
-#[cfg(test)]
-pub mod observer_test;
 pub mod factorymethod;
 #[cfg(test)]
 pub mod factorymethod_test;
@@ -40,3 +37,7 @@ pub mod factorymethod_test;
 pub mod adapter;
 #[cfg(test)]
 pub mod adapter_test;
+
+pub mod observer;
+#[cfg(test)]
+pub mod observer_test;
