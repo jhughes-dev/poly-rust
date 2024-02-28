@@ -53,7 +53,7 @@ Patterns which are already implemented are marked with a [x]. Issues for example
 #### Creational
 
 * [x] Abstract Factory
-* [x] Builder 
+* [x] Builder
 * [x] Factory Method
 * [x] Prototype
 * [x] Singleton
