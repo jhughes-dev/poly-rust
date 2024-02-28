@@ -45,3 +45,7 @@ pub mod observer_test;
 pub mod proxy;
 #[cfg(test)]
 pub mod proxy_test;
+
+pub mod visitor;
+#[cfg(test)]
+pub mod visitor_test;
