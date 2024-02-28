@@ -33,3 +33,7 @@ pub mod abstractfactory_test;
 pub mod factorymethod;
 #[cfg(test)]
 pub mod factorymethod_test;
+
+pub mod adapter;
+#[cfg(test)]
+pub mod adapter_test;
