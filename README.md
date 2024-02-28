@@ -31,7 +31,7 @@ Patterns which are already implemented are marked with a [x]. Issues for example
 * [ ] Decorator [#3](https://github.com/jhughes-dev/poly-rust/issues/3)
 * [ ] Facade [#4](https://github.com/jhughes-dev/poly-rust/issues/4)
 * [ ] Flyweight [#5](https://github.com/jhughes-dev/poly-rust/issues/5)
-* [ ] Proxy
+* [x] Proxy
 
 ---
 
