@@ -25,7 +25,7 @@ Patterns which are already implemented are marked with a [x]. Issues for example
 
 #### Structural
 
-* [ ] Adapter [#1](https://github.com/jhughes-dev/poly-rust/issues/1)
+* [x] Adapter
 * [ ] Bridge [#2](https://github.com/jhughes-dev/poly-rust/issues/2)
 * [x] Composite
 * [ ] Decorator [#3](https://github.com/jhughes-dev/poly-rust/issues/3)
