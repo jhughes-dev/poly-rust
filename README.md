@@ -46,7 +46,7 @@ Patterns which are already implemented are marked with a [x]. Issues for example
 * [ ] State [#13](https://github.com/jhughes-dev/poly-rust/issues/13)
 * [x] Strategy
 * [x] Template Method
-* [ ] Visitor [#14](https://github.com/jhughes-dev/poly-rust/issues/14)
+* [x] Visitor
 
 ---
 
