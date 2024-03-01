@@ -49,3 +49,9 @@ pub mod proxy_test;
 pub mod visitor;
 #[cfg(test)]
 pub mod visitor_test;
+
+pub mod decorator;
+#[cfg(test)]
+pub mod decorator_alt;
+#[cfg(test)]
+pub mod decorator_test;
