@@ -42,7 +42,7 @@ Patterns which are already implemented are marked with a [x]. Issues for example
 * [ ] Iterator [#9](https://github.com/jhughes-dev/poly-rust/issues/9) (Standard Rust Feature)
 * [ ] Mediator [#10](https://github.com/jhughes-dev/poly-rust/issues/10)
 * [ ] Memento [#11](https://github.com/jhughes-dev/poly-rust/issues/11)
-* [ ] Observer [#12](https://github.com/jhughes-dev/poly-rust/issues/12)
+* [x] Observer
 * [ ] State [#13](https://github.com/jhughes-dev/poly-rust/issues/13)
 * [x] Strategy
 * [x] Template Method
