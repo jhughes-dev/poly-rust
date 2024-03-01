@@ -29,7 +29,7 @@ Patterns which are already implemented are marked with a [x]. Issues for example
 * [ ] Bridge [#2](https://github.com/jhughes-dev/poly-rust/issues/2)
 * [x] Composite
 * [x] Decorator
-* [ ] Facade [#4](https://github.com/jhughes-dev/poly-rust/issues/4)
+* [ ] Facade [#4](https://github.com/jhughes-dev/poly-rust/issues/4) (Not polymorphic)
 * [ ] Flyweight [#5](https://github.com/jhughes-dev/poly-rust/issues/5)
 * [x] Proxy
 
@@ -40,7 +40,7 @@ Patterns which are already implemented are marked with a [x]. Issues for example
 * [x] Chain of Responsibility
 * [x] Command [#8](https://github.com/jhughes-dev/poly-rust/issues/8)
 * [ ] Iterator [#9](https://github.com/jhughes-dev/poly-rust/issues/9) (Standard Rust Feature)
-* [ ] Mediator [#10](https://github.com/jhughes-dev/poly-rust/issues/10)
+* [ ] Mediator [#10](https://github.com/jhughes-dev/poly-rust/issues/10) (Not polymorphic)
 * [ ] Memento [#11](https://github.com/jhughes-dev/poly-rust/issues/11)
 * [x] Observer
 * [ ] State [#13](https://github.com/jhughes-dev/poly-rust/issues/13)
@@ -68,7 +68,7 @@ Patterns which are already implemented are marked with a [x]. Issues for example
 ### Links
 
 * https://refactoring.guru/design-patterns/rust - Good Design Pattern Examples in Rust, most use compile time polymorphism.
-* https://rust-unofficial.github.io/patterns/patterns/index.html - Rust official design patterns.
+* https://rust-unofficial.github.io/patterns/patterns/index.html - Rust (un)official design patterns.
 * https://www.google.com/books/edition/Design_Patterns/6oHuKQe3TjQC?hl=en&gbpv=0&kptab=getbook - "Gang of Four" Design Patterns Book (great for reference)
 * https://www.google.com/books/edition/Head_First_Design_Patterns/GGpXN9SMELMC?hl=en&gbpv=0 - Headfirst Design Patterns Book, (great for learning)
 
