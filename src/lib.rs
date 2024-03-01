@@ -55,3 +55,7 @@ pub mod decorator;
 pub mod decorator_alt;
 #[cfg(test)]
 pub mod decorator_test;
+
+pub mod chainofresponsibility;
+#[cfg(test)]
+pub mod chainofresponsibility_test;
