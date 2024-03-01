@@ -37,7 +37,7 @@ Patterns which are already implemented are marked with a [x]. Issues for example
 
 #### Behavioral
 
-* [ ] Chain of Responsibility [#7](https://github.com/jhughes-dev/poly-rust/issues/7)
+* [x] Chain of Responsibility
 * [x] Command [#8](https://github.com/jhughes-dev/poly-rust/issues/8)
 * [ ] Iterator [#9](https://github.com/jhughes-dev/poly-rust/issues/9) (Standard Rust Feature)
 * [ ] Mediator [#10](https://github.com/jhughes-dev/poly-rust/issues/10)
