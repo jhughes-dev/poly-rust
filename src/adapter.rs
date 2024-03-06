@@ -8,6 +8,7 @@ pub trait ExpectedInterface {
     fn receive(&self) -> String;
 }
 
+#[derive(Default)]
 pub struct DeviceInterface {}
 
 impl DeviceInterface {
@@ -69,6 +70,6 @@ impl ExpectedInterface for Adapter {
 
     fn receive(&self) -> String {
         // Wouldn't really do this in production code, but works for this example.
-        String::from_utf8_lossy(&self.device.read().to_vec()).to_string()
+        String::from_utf8_lossy(self.device.read()).to_string()
     }
 }

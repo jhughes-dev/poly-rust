@@ -5,6 +5,7 @@ pub trait Command {
 }
 
 // Since processor has private data it can't be created outside the module.
+#[derive(Default)]
 pub struct Processor {
     data: i32,
 }
@@ -28,6 +29,7 @@ impl Processor {
 
 // App wraps the processor and keeps it from being generally accessible except
 // through the command interface.
+#[derive(Default)]
 pub struct App {
     proc: Processor,
 }
@@ -73,6 +75,7 @@ impl Command for SetValue {
 }
 
 // Bump the data value up by two
+#[derive(Default)]
 pub struct UpByTwo {}
 
 impl UpByTwo {
@@ -88,6 +91,7 @@ impl Command for UpByTwo {
 }
 
 // Drop the data by three
+#[derive(Default)]
 pub struct DownByThree {}
 
 impl DownByThree {

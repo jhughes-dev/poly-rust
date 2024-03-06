@@ -47,3 +47,9 @@ impl PrototypeManager {
         }
     }
 }
+
+impl Default for PrototypeManager {
+    fn default() -> Self {
+        Self::new()
+    }
+}

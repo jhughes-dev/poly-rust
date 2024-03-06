@@ -22,6 +22,7 @@ pub trait Observer {
     fn notify(&mut self, observable: &dyn Observable);
 }
 
+#[derive(Default)]
 pub struct ConcreteObservable {
     observers: Vec<Weak<RefCell<dyn Observer>>>,
 }

@@ -14,6 +14,7 @@ pub trait Decorator {
 // fn decorate(Box<dyn Decorator>) -> Box<dyn Decorator> to do the decoration,
 // and some other function is used for the base regardless of type.
 // See decorator_alt.rs for that example.
+#[derive(Default)]
 pub struct BaseComponent {}
 
 impl BaseComponent {
