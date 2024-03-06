@@ -72,7 +72,6 @@ impl Decorator for Chicken {
 
 #[test]
 fn make_turducken() {
-
     // I think this looks a lot nicer than the standard approach since you don't wind up manually boxing everything.
     let turducken = Turkey::decorate(Duck::decorate(Chicken::finish()));
 

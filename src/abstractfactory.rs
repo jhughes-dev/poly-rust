@@ -27,7 +27,6 @@ pub struct PrototypeManager {
     prototypes: HashMap<String, Box<dyn Prototype>>,
 }
 
-
 impl PrototypeManager {
     pub fn new() -> PrototypeManager {
         PrototypeManager {
