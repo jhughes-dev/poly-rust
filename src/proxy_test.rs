@@ -47,5 +47,8 @@ fn test_proxy() {
         "RealResource3: fetching from http://www.google.com"
     );
 
-    assert_eq!(proxy.request("http://www.yahoo.com").unwrap(), "Blocked: http://www.yahoo.com");
+    assert_eq!(
+        proxy.request("http://www.yahoo.com").unwrap(),
+        "Blocked: http://www.yahoo.com"
+    );
 }

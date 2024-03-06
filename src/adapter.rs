@@ -8,6 +8,7 @@ pub trait ExpectedInterface {
     fn receive(&self) -> String;
 }
 
+#[derive(Default)]
 pub struct DeviceInterface {}
 
 impl DeviceInterface {
@@ -17,7 +18,9 @@ impl DeviceInterface {
 
     fn read(&self) -> &[u8] {
         // Hex values for "Hello, world!"
-        &[0x48, 0x65, 0x6C, 0x6C, 0x6F, 0x2C, 0x20, 0x77, 0x6F, 0x72, 0x6C, 0x64, 0x21]
+        &[
+            0x48, 0x65, 0x6C, 0x6C, 0x6F, 0x2C, 0x20, 0x77, 0x6F, 0x72, 0x6C, 0x64, 0x21,
+        ]
     }
 
     fn write(&self, data: &[u8]) {
@@ -54,10 +57,8 @@ pub struct Adapter {
 }
 
 impl Adapter {
-    pub fn new(device: DeviceInterface ) -> Adapter {
-        Adapter {
-            device,
-        }
+    pub fn new(device: DeviceInterface) -> Adapter {
+        Adapter { device }
     }
 }
 
@@ -69,6 +70,6 @@ impl ExpectedInterface for Adapter {
 
     fn receive(&self) -> String {
         // Wouldn't really do this in production code, but works for this example.
-        String::from_utf8_lossy(&self.device.read().to_vec()).to_string()
+        String::from_utf8_lossy(self.device.read()).to_string()
     }
 }

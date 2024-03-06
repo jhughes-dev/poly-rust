@@ -27,7 +27,6 @@ pub struct PrototypeManager {
     prototypes: HashMap<String, Box<dyn Prototype>>,
 }
 
-
 impl PrototypeManager {
     pub fn new() -> PrototypeManager {
         PrototypeManager {
@@ -46,5 +45,11 @@ impl PrototypeManager {
             Some(prototype) => Some(prototype.instantiate()),
             None => None,
         }
+    }
+}
+
+impl Default for PrototypeManager {
+    fn default() -> Self {
+        Self::new()
     }
 }

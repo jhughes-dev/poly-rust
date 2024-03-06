@@ -1,7 +1,4 @@
-use std::{
-    cell::RefCell,
-    rc::*,
-};
+use std::{cell::RefCell, rc::*};
 
 // Observer looks straitforward, and it shows some aspects of Rust that really shine, but
 // things get tricky with the Box<dyn Observer>, since having a mut reference stored in the
@@ -25,6 +22,7 @@ pub trait Observer {
     fn notify(&mut self, observable: &dyn Observable);
 }
 
+#[derive(Default)]
 pub struct ConcreteObservable {
     observers: Vec<Weak<RefCell<dyn Observer>>>,
 }
@@ -43,7 +41,8 @@ impl Observable for ConcreteObservable {
     }
 
     fn remove_observer(&mut self, observer: &Rc<RefCell<dyn Observer>>) {
-        self.observers.retain(|o| !o.ptr_eq(&Rc::downgrade(observer)));
+        self.observers
+            .retain(|o| !o.ptr_eq(&Rc::downgrade(observer)));
     }
 
     fn notify_observers(&mut self) {
