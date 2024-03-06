@@ -7,25 +7,31 @@ pub trait Visitor {
 pub trait AcceptVisitor {
     fn accept(&self, visitor: &dyn Visitor) -> String;
 }
-pub struct Cat;
 
+#[derive(Default)]
+pub struct Cat;
 impl Cat {
     pub fn new() -> Cat {
         Cat
     }
 }
+
+#[derive(Default)]
 pub struct Dog;
 impl Dog {
     pub fn new() -> Dog {
         Dog
     }
 }
+
+#[derive(Default)]
 pub struct Fish;
 impl Fish {
     pub fn new() -> Fish {
         Fish
     }
 }
+
 impl AcceptVisitor for Cat {
     fn accept(&self, visitor: &dyn Visitor) -> String {
         visitor.visit_cat()

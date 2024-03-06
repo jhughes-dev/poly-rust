@@ -25,15 +25,14 @@ fn set_controller() {
 
     {
         // After updating, should get new value
-        controller::set_controller(Controller1{});
+        controller::set_controller(Controller1 {});
         assert_eq!(controller::get_data(), "#1");
     }
     // Should still get the new value since it's stored somewhere else
     assert_eq!(controller::get_data(), "#1");
 
-    controller::set_controller(Controller2{});
+    controller::set_controller(Controller2 {});
     assert_eq!(controller::get_data(), "#2");
-
 }
 
 // This test fails sporadically, it's supposed to do that. You can uncomment and run it a few times

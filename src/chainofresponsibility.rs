@@ -1,7 +1,7 @@
-#[derive(Debug,PartialEq)]
+#[derive(Debug, PartialEq)]
 pub enum Status {
     Approved,
-    Denied(String /*Denial Reason*/)
+    Denied(String /*Denial Reason*/),
 }
 
 pub trait ReportHandler {

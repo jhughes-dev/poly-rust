@@ -1,4 +1,3 @@
-
 use crate::chainofresponsibility::*;
 
 struct Manager {
@@ -11,7 +10,7 @@ impl Manager {
     }
     #[allow(dead_code)] // Just for completeness
     fn last() -> Box<Manager> {
-        Box::new(Manager { next : None})
+        Box::new(Manager { next: None })
     }
 }
 
@@ -38,7 +37,7 @@ impl Director {
     }
     #[allow(dead_code)] // Just for completeness
     fn last() -> Box<Director> {
-        Box::new(Director { next : None})
+        Box::new(Director { next: None })
     }
 }
 
@@ -65,7 +64,7 @@ impl VP {
         Box::new(VP { next: Some(next) })
     }
     fn last() -> Box<VP> {
-        Box::new(VP { next : None})
+        Box::new(VP { next: None })
     }
 }
 
@@ -88,15 +87,24 @@ fn chain_of_responsibility() {
 
     let mut tps_report = Report::new("Alice", "This is a report", false);
 
-    assert_eq!(manager.handle(&tps_report), Status::Denied("No cover sheets on TPS reports".to_string()));
+    assert_eq!(
+        manager.handle(&tps_report),
+        Status::Denied("No cover sheets on TPS reports".to_string())
+    );
 
     tps_report.cover = true;
 
-    assert_eq!(manager.handle(&tps_report), Status::Denied("This should be more concise".to_string()));
+    assert_eq!(
+        manager.handle(&tps_report),
+        Status::Denied("This should be more concise".to_string())
+    );
 
     tps_report.content = "Report".to_string();
 
-    assert_eq!(manager.handle(&tps_report), Status::Denied("I need to see more content".to_string()));
+    assert_eq!(
+        manager.handle(&tps_report),
+        Status::Denied("I need to see more content".to_string())
+    );
 
     tps_report.content = "A report".to_string();
 

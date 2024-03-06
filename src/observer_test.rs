@@ -1,6 +1,6 @@
 use crate::observer::*;
-use std::rc::Rc;
 use std::cell::RefCell;
+use std::rc::Rc;
 
 struct ConcreteObserver {
     pub state: i32,
@@ -8,9 +8,7 @@ struct ConcreteObserver {
 
 impl ConcreteObserver {
     fn new() -> ConcreteObserver {
-        ConcreteObserver {
-            state: 0,
-        }
+        ConcreteObserver { state: 0 }
     }
 }
 
@@ -29,7 +27,7 @@ fn test_observer() {
 
     // ... and RCs to a RefCell containing a trait object - i.e. type erased
     let ob1_ref: Rc<RefCell<dyn Observer>> = ob1.clone();
-    let ob2_ref:Rc<RefCell<dyn Observer>> = ob2.clone();
+    let ob2_ref: Rc<RefCell<dyn Observer>> = ob2.clone();
 
     observable.add_observer(&ob1_ref);
     observable.add_observer(&ob2_ref);

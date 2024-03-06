@@ -54,16 +54,16 @@ impl CharacterBuilder {
     }
     pub fn set_health(mut self, health: i32) -> Self {
         self.health = Some(health);
-        return self;
+        self
     }
     pub fn set_attack<T: Attack + 'static>(mut self, attack: T) -> Self {
         self.attack = Some(Box::new(attack));
-        return self;
+        self
     }
 
     pub fn set_defense<T: Defense + 'static>(mut self, defense: T) -> Self {
         self.defense = Some(Box::new(defense));
-        return self;
+        self
     }
 
     pub fn finalize(self) -> Character {

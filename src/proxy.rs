@@ -2,6 +2,7 @@ pub trait ResourceInterface {
     fn request(&self, url: &str) -> Option<String>;
 }
 
+#[derive(Default)]
 pub struct ProxyResource {
     resource: Option<Box<dyn ResourceInterface>>,
 }

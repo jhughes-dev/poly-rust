@@ -6,7 +6,7 @@ pub struct Turkey {
 
 impl Turkey {
     pub fn new(next: Box<dyn Decorator>) -> Turkey {
-        Turkey{next}
+        Turkey { next }
     }
 }
 
@@ -22,7 +22,7 @@ pub struct Duck {
 
 impl Duck {
     pub fn new(next: Box<dyn Decorator>) -> Duck {
-        Duck{next}
+        Duck { next }
     }
 }
 
@@ -38,7 +38,7 @@ pub struct Chicken {
 
 impl Chicken {
     pub fn new(next: Box<dyn Decorator>) -> Chicken {
-        Chicken{next}
+        Chicken { next }
     }
 }
 
@@ -49,16 +49,13 @@ impl Decorator for Chicken {
 }
 
 #[test]
-fn make_turducken()  {
-
+fn make_turducken() {
     // Add the boxing and new here makes this a little hard to
     // understand, see decorator_alt.rs for what I think it a slightly better API
     let nothing = Box::new(BaseComponent::new());
-    let turducken = Box::new(Turkey::new(
-            Box::new(Duck::new(
-                Box::new(Chicken::new(nothing))
-            ))
-        ));
+    let turducken = Box::new(Turkey::new(Box::new(Duck::new(Box::new(Chicken::new(
+        nothing,
+    ))))));
 
     assert_eq!("TurkeyDuckChicken", turducken.delegate());
 

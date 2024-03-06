@@ -29,6 +29,7 @@ impl Leaf {
 // This has an advantage of simplicity, but there's nothing
 // stopping having a separate class, or using a Box<dyn Composible>
 // and calling this a collection.
+#[derive(Default)]
 pub struct Composite {
     data: Vec<Box<dyn Composible>>,
 }
