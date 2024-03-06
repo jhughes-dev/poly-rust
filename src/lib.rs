@@ -59,3 +59,7 @@ pub mod decorator_test;
 pub mod chainofresponsibility;
 #[cfg(test)]
 pub mod chainofresponsibility_test;
+
+pub mod typestatebuilder;
+#[cfg(test)]
+pub mod typestatebuilder_test;

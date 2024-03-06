@@ -57,6 +57,7 @@ Patterns which are already implemented are marked with a [x]. Issues for example
 * [x] Factory Method
 * [x] Prototype
 * [x] Singleton (Not Polymorphic)
+* [x] [Type State Builder](src/typestatebuilder.rs) (Monomorphic Builder -> Possible to build polymorphic similar to builder though)
 
 ---
 
